@@ -51,10 +51,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ptcticket.urls'
 
+#os.getcwd() + '/tickets/templates'
+#TEMPLATE_DIRS = ('/mnt/c/Users/Hunte/OneDrive/Documents/Projects/Hackathon/ptcticket/tickets/templates',)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, 'tickets', 'templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
