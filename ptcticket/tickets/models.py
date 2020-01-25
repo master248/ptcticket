@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Question(models.Model):
+class Tickets(models.Model):
     name = models.CharField(max_length=15)
     course = models.CharField(max_length=8)
     question = models.CharField(max_length=200)
