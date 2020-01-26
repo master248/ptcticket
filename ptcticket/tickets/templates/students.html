@@ -11,9 +11,13 @@
 <body>
 <h1> Welcome to Peer Teacher Central
 <br> Please Sign In Below </h1> 
-{{ form }}
 
-</body>
+<form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Submit</button>
+</form>
+</body>   
 
 </html>
 
