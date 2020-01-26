@@ -5,8 +5,15 @@ from .forms import ContactForm
 from .forms import ManageForm
 from .models import Tickets
 
-def contact(request):
-     form = ContactForm()
+def tickets_detail(request):
+
+     if request.method == 'POST':
+          form = TicketsForm(request.POST)
+          if form.is_valid():
+               form.save()
+               return render(request, 'succ.html')
+
+     form = TicketsForm()
      return render(request, 'students.html', {'form': form})
 def manage(request):
     if request.method == 'POST'
