@@ -14,7 +14,7 @@
 {% if student_tickets %}
     <ul>
     {% for tickets in student_tickets %}
-        <li>{{ tickets.name }}</li>
+        <li>{{ tickets.name }} {{ form }}</li>
     {% endfor %}
     </ul>
 {% else %}
