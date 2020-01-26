@@ -7,8 +7,8 @@ csCourses = [
 ]
 # Create your models here.
 class Tickets(models.Model):
-    name = models.CharField(max_length=15)
+    name = models.CharField("First Name", max_length=15)
     course = models.CharField(max_length=8, choices = csCourses)
-    question = models.CharField(max_length=200)
+    question = models.TextField(max_length=200, blank=True)
     completed = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add= True)
