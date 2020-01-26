@@ -14,7 +14,7 @@
 <br> Please Sign In Below </h1> 
 
 <form method = "post">
-    {% csrf_tocken %}
+    {% csrf_token %}
     {{ form|crispy}}
     <button type = "submit">Submit</button>
 </form>
