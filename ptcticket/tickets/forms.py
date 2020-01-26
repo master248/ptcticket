@@ -1,8 +1,10 @@
 from django import forms
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit
 from .models import Tickets
 
 class ContactForm(forms.Form):
-    name = forms.CharField()
+    name = forms.CharField(max_length=15)
     course = forms.ChoiceField(choices=[('121', '121'), ('other', 'Other')])
 
 

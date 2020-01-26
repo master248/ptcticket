@@ -13,9 +13,9 @@ csCourses = [
 ]
 # Create your models here.
 class Tickets(models.Model):
-    name = models.CharField(max_length=15)
-    course = models.CharField(max_length=8, choices=csCourses)
-    question = models.CharField(max_length=200)
+    name = models.CharField("First Name", max_length=15)
+    course = models.CharField(max_length=8, choices = csCourses)
+    question = models.TextField(max_length=200)
     completed = models.BooleanField(default=False)
     peer = models.CharField(max_length=50,null=True,default="none")
     timestamp = models.DateTimeField(auto_now_add= True)
