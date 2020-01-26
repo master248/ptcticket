@@ -12,7 +12,12 @@
 <body>
 <h1> Welcome to Peer Teacher Central
 <br> Please Sign In Below </h1> 
-{{ form|crispy}}
+
+<form method = "post">
+    {% csrf_tocken %}
+    {{ form|crispy}}
+    <button type = "submit">Submit</button>
+</form>
 
 </body>
 
