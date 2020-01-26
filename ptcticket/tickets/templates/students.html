@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <! doctype html>
 
 <html>
@@ -12,12 +13,13 @@
 <h1> Welcome to Peer Teacher Central
 <br> Please Sign In Below </h1> 
 
-<form method="post">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Submit</button>
+<form method = "post">
+    {% csrf_tocken %}
+    {{ form|crispy}}
+    <button type = "submit">Submit</button>
 </form>
-</body>   
+
+</body>
 
 </html>
 
