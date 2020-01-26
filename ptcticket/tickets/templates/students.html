@@ -17,10 +17,13 @@
 
 <form method = "post">
     {% csrf_token %}
-
-    {{ form|crispy}}
+    <div class="form-group col-md-6 mb-0">
+        {{ form.name|as_crispy_field}}
+        {{ form.course|as_crispy_field}}
+        {{ form.question|as_crispy_field}}
     <br>
-    <button type = "submit">Submit</button>
+    <button type = "submit" class ="btn btn-primary">Submit</button>
+    </div>
 </form>
 
 </body>
