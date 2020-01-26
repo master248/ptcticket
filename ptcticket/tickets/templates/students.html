@@ -1,11 +1,24 @@
-
+ 
 {% load crispy_forms_tags %}
 <! doctype html>
-
+ 
+<style>
+.abc { 
+        margin: 0 auto; 
+        width:300px;
+}
+</style>
+ 
+<style>
+.bcd { 
+        margin: 1 auto; 
+                width:290px;
+      }
+        </style>
+ 
 <html>
-
-<head>
-
+ 
+<head>     
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -14,37 +27,46 @@
     body{ text-align: center; background-color: #D5DBDB;}
     form{display: inline-block;}
     h1 {color: #500000;}
-
-
+ 
+ 
   </style>  
 </head>
-
-
-
+ 
+ 
+ 
 <body>
-<h1 > <br> PTC Sign In </h1> 
-
+<h1 > <br> PTC Student Sign In </h1> 
+ 
 <form method = "post">
     {% csrf_token %}
    
-     <div class="form-group col-md-6 mb-0>
-
-
+     <div class="form-group col-md-6 mb-0">
+ 
+ 
+        <div class = "bcd">
         {{ form.name|as_crispy_field}}
+        
         {{ form.course|as_crispy_field}}
-        {{ form.question|as_crispy_field}}
+        </div>
+        <div class = "abc">
+                {{ form.question|as_crispy_field}}
+        
     <br>
     <button type = "submit" class ="btn btn">Submit</button>
     </div>
+</div>
     
-
-
+ 
+ 
 </form>
-
+ 
 </body>
-
+ 
 </html>
-
-
+ 
+ 
+ 
+ 
+ 
 
 
