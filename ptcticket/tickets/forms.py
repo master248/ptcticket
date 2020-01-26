@@ -1,5 +1,7 @@
 from django import forms
 
 class ContactForm(forms.Form):
-    name = forms.CharField()
-    class_category = forms.ChoiceField(choices=[('121', '121'), ('other', 'Other')])
+    first_Name = forms.CharField()
+    class_Name = forms.ChoiceField(choices=[('121', '121'), ('other', 'Other')])
+    question = forms.CharField(widget=forms.Textarea)
+    
