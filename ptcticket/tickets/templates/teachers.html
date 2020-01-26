@@ -1,0 +1,25 @@
+<! doctype html>
+
+<html>
+
+<head> <! for title>
+
+<title> Hackathon 2020 Peer Teacher Side </title>
+
+</head>
+
+<body>
+<h1> Welcome to Peer Teacher Central
+<br> These Students need help </h1> 
+{% if student_tickets %}
+    <ul>
+    {% for tickets in student_tickets %}
+        <li>{{ tickets.name }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No students are available.</p>
+{% endif %} 
+</body>
+
+</html>
