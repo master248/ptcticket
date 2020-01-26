@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tickets.apps.TicketsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,13 +52,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ptcticket.urls'
 
-#os.getcwd() + '/tickets/templates'
-#TEMPLATE_DIRS = ('/mnt/c/Users/Hunte/OneDrive/Documents/Projects/Hackathon/ptcticket/tickets/templates',)
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [(os.path.join(BASE_DIR, 'tickets', 'templates'))],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
