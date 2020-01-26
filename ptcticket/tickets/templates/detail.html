@@ -14,7 +14,7 @@
 <br> {{student_ticket.course}} 
 <br> {{student_ticket.question}}</h1> 
 
-<form method = "post">
+<form method = "post" name="complete">
     {% csrf_token %}
     {{ form|crispy}}
     <button type = "submit">Completed</button>

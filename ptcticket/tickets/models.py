@@ -6,5 +6,5 @@ class Tickets(models.Model):
     course = models.CharField(max_length=8)
     question = models.CharField(max_length=200)
     completed = models.BooleanField(default=False)
-    peer = models.CharField(max_length=50,default="none")
+    peer = models.CharField(max_length=50,null=True,default="none")
     timestamp = models.DateTimeField(auto_now_add= True)
