@@ -18,12 +18,12 @@ def tickets_detail(request):
     return render(request, 'students.html', {'form': form})
 def student_list(request):
     student_tickets = Tickets.objects.filter(completed=False)
-    return render(request, 'teachers.html', {'student_tickets': student_tickets,'form': form})
-def manage(request):
-    student_tickets = Tickets.objects.filter(completed=False)
+    return render(request, 'teachers.html', {'student_tickets': student_tickets})
+def manage(request,ticket_id):
+    student_ticket = Tickets.objects.get(id=ticket_id)
     if request.method == 'POST':
         form = ManageForm(request.POST)
         if form.is_valid():
-            Tickets.objects.filter(id=6).update(completed=True)
+            Tickets.objects.filter(id=ticket_id).update(completed=True)
     form = ManageForm()
-    return render(request, 'teachers.html', {'student_tickets': student_tickets,'form': form})
+    return render(request, 'detail.html', {'student_ticket': student_ticket,'form': form})

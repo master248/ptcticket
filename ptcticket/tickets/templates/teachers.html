@@ -14,9 +14,7 @@
 {% if student_tickets %}
     <ul>
     {% for t in student_tickets %}
-        <li>{% csrf_token %} {{ t.name }}
-                <a href="{% url 'views-teachers' t.id %}"> 
-        </li>
+    <li><a href="{% url 'views-teachers' t.id %}">{{ t.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

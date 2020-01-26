@@ -10,13 +10,14 @@
 </head>
 
 <body>
-<h1> Welcome to Peer Teacher Central
-<br> Please Sign In Below </h1> 
+<h1> {{student_ticket.name}}
+<br> {{student_ticket.course}} 
+<br> {{student_ticket.question}}</h1> 
 
 <form method = "post">
     {% csrf_token %}
     {{ form|crispy}}
-    <button type = "submit">Submit</button>
+    <button type = "submit">Completed</button>
 </form>
 
 </body>
