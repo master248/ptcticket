@@ -14,7 +14,9 @@
 {% if student_tickets %}
     <ul>
     {% for tickets in student_tickets %}
-        <li>{{ tickets.name }} {{ form }}</li>
+        <li><form method="post"> {% csrf_token %} {{ tickets.name }} {{ form }} 
+            <button type="submit">Completed</button>
+        </form></li>
     {% endfor %}
     </ul>
 {% else %}
