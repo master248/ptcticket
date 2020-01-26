@@ -2,6 +2,20 @@
 <! doctype html>
 
 <html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <style>
+    body{ text-align: center; background-color: #D5DBDB;}
+    form{display: inline-block;}
+    h1 {text-align: center;color: #500000;}
+
+
+  </style>  
+</head>
 
 <head> <! for title>
 
@@ -10,14 +24,15 @@
 </head>
 
 <body>
-<h1> {{student_ticket.name}}
-<br> {{student_ticket.course}} 
-<br> {{student_ticket.question}}</h1> 
+<h1> <br> {{student_ticket.name}} </h1>
+<br> <h2>{{student_ticket.course}}
+<br><br> {{student_ticket.question}}<br><br></h2>
 
 <form method = "post" name="complete">
     {% csrf_token %}
     {{ form|crispy}}
-    <button type = "submit">Completed</button>
+    <br>
+    <button type = "submit" class ="btn btn">Completed</button>
 </form>
 
 </body>
