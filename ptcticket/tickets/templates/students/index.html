@@ -31,12 +31,3 @@ Class:
 	<! ul unordered list: bullets, ol ordered list: numbers>
 	<! li % list input>
 	<! &nbsp for spaces>
-{% if student_tickets %}
-    <ul>
-    {% for tickets in student_tickets %}
-        <li><a href="/tickets/"></a>{{ tickets.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}

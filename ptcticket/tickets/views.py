@@ -1,15 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 from django.http import HttpResponse
-from django.template import loader
-from .models import Tickets
+from .forms import ContactForm
 
-# Create your views here.
-def index(request):
-    student_tickets = Tickets.objects.all()
-    template = loader.get_template('students/index.html')
-    #output = ', '.join([t.name for t in students])
-    context = {'student_tickets': student_tickets}
-    return render(request, 'students/index.html', context)
-# def index(request):
-#      return render(request, 'students/index.html')
-#return HttpResponse(output)
+def contact(request):
+     form = ContactForm()
+     return render(request, 'students.html', {'form': form})
