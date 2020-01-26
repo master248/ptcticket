@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 from django.http import HttpResponse
+from .forms import ContactForm
 
-# Create your views here.
-def index(request):
-     return render(request, 'students/index.html')
+def contact(request):
+     form = ContactForm()
+     return render(request, 'students.html', {'form': form})
