@@ -13,3 +13,5 @@ class TicketsForm(forms.ModelForm):
     class Meta:
         model = Tickets
         fields = ('name','course','question')
+class ManageForm(forms.Form):
+    pt = forms.CharField()
