@@ -13,10 +13,10 @@
 <br> These Students need help </h1> 
 {% if student_tickets %}
     <ul>
-    {% for tickets in student_tickets %}
-        <li><form method="post"> {% csrf_token %} {{ tickets.name }} {{ form }} 
-            <button type="submit">Completed</button>
-        </form></li>
+    {% for t in student_tickets %}
+        <li>{% csrf_token %} {{ t.name }}
+                <a href="{% url 'views-teachers' t.id %}"> 
+        </li>
     {% endfor %}
     </ul>
 {% else %}
