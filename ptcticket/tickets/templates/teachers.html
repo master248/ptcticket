@@ -37,7 +37,7 @@
    <h3>
     <ul style="list-style-type:none;">
     {% for t in student_tickets %}
-    <li><a href="{% url 'views-teachers' t.id %}">{{ t.name }}</a></li>
+    <li><a href="{% url 'views-teachers' t.id %}">{{ t.name }} {{ t.course }}</a></li>
     {% endfor %}
     </ul>
     </h3>
